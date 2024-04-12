@@ -2,6 +2,13 @@
 #include <Wire.h>
 #include <Zumo32U4.h>
 
+#ifndef WIFI_SSID
+#define WIFI_SSID "NTNU-IOT"
+#endif
+
+#ifndef WIFI_PASSWORD
+#define WIFI_PASSWORD ""
+#endif
 
 
 Zumo32U4ButtonC buttonC;
@@ -19,6 +26,7 @@ void setup() {
 
 void loop() {
   // Clear the screen
+
   display.clear();
   // Print a string
   display.print("hi");

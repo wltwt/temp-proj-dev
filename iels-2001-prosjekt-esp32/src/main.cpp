@@ -2,22 +2,16 @@
 #include <Wire.h>
 #include <PubSubClient.h>
 #include <WiFi.h>
-#include <Wire.h>
 
-#define SDA 16
-#define SCL 17
 
 void setup_wifi();
 void reconnect();
 void callback(char* topic, byte* message, unsigned int length);
 
 // WiFi
-const char *ssid = "NTNU-IOT"; // Enter your WiFi name
-const char *password = "";  // Enter WiFi password
-
-// Add your MQTT Broker IP address, example:
-//const char* mqtt_server = "192.168.1.144";
-const char* mqtt_server = "10.25.18.209";
+const char *ssid = WIFI_SSID; // Enter your WiFi name
+const char *password = WIFI_PASSWORD;  // Enter WiFi password
+const char *mqtt_server = MQTT_SERVER_IP;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
