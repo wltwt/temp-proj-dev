@@ -2,14 +2,6 @@
 #include <Wire.h>
 #include <Zumo32U4.h>
 
-#ifndef WIFI_SSID
-#define WIFI_SSID "NTNU-IOT"
-#endif
-
-#ifndef WIFI_PASSWORD
-#define WIFI_PASSWORD ""
-#endif
-
 
 Zumo32U4ButtonC buttonC;
 Zumo32U4OLED display;
